@@ -184,7 +184,7 @@ def lambda_handler(event, context):
             for attrib in userinfo['UserAttributes']:
                 print(str(attrib))
                 if attrib['Name'] == 'custom:Client':
-                    routename=attrib['Value']
+                    routename = attrib['Value']
                     print("route name: " + routename)
         except:
             print("user attributes do not include custom client field.   This means nobody installed a skill client for this account")
